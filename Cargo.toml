@@ -1,0 +1,34 @@
+[package]
+name = "bearbot"
+version = "0.1.1"
+authors = ["Kullawat Chaowanawatee <e29qwg@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dotenv = "0.15"
+tracing = "0.1.23"
+tracing-subscriber = "0.2"
+fasteval = "0.2"
+serde = "1.0"
+serde_json = "1.0"
+youtube_dl = "0.7.0"
+
+[dependencies.tokio]
+version = "1"
+features = ["macros", "signal", "rt-multi-thread"]
+
+[dependencies.serenity]
+version = "0.10"
+default-features = false
+features = ["cache", "collector", "client", "gateway", "model", "rustls_backend", "unstable_discord_api", "voice"]
+
+[dependencies.songbird]
+git = "https://github.com/serenity-rs/songbird"
+branch = "current"
+features = ["builtin-queue", "yt-dlp"]
+
+[dependencies.parrot]
+git = "https://github.com/aquelemiguel/parrot"
+branch = "main"
